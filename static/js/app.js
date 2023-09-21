@@ -193,4 +193,4 @@ function optionChanged(selectedID) {
 }
 
 // Attach the optionChanged function to the dropdown's onchange event
-d3.select("#selDataset").on("change", optionChanged);
+// d3.select("#selDataset").on("change", optionChanged);
