@@ -135,43 +135,45 @@ function createGaugeChart(selectedID) {
         mode: "gauge+number",
         value: washingFrequency,
         title: {
-            text: "Belly Button Washing Frequency",
-            font: { size: 24 }
+            text: "<span style ='font-size:1.3em;color:dimgrey;font-family:verdana'><b>Belly Button Washing Frequency</b></span><br><span style='font-size:1.3em;color:dimgray;font-family:verdana'>Scrubs Per Week</span>",
         },
         gauge: {
-            axis: { range: [0, 9], tickwidth: 1, tickcolor: "darkblue" },
-            bar: { color: "darkblue" },
+            axis: { range: [0, 9], tickwidth: 1, tickcolor: "#648e6c"},
+            bar: { color: "#6f9e78" },
             bgcolor: "white",
             borderwidth: 2,
             bordercolor: "gray",
             steps: [
-              { range: [0, 1], color: "rgb(255, 255, 255, 0)" },
-              { range: [1, 2], color: "rgb(232,226,202)" },
-              { range: [2, 3], color: "rgb(210,206,145)" },
-              { range: [3, 4], color: "rgb(202,209,95)" },
-              { range: [4, 5], color: "rgb(170,202,42)" },
-              { range: [5, 6], color: "rgb(110,154,22)" },
-              { range: [6, 7], color: "rgb(14,127,0)" },
-              { range: [7, 8], color: "rgb(10,120,22)" },
-              { range: [8, 9], color: "rgb(0,100,0)" }
+                { range: [0, 1], color: "#f7f2ec"},
+                { range: [1, 2], color: "#f3f0e5"},
+                { range: [2, 3], color: "#e9e7c9"},
+                { range: [3, 4], color: "#e5e9b1"},
+                { range: [4, 5], color: "#d5e595"},
+                { range: [5, 6], color: "#b7cd8b"},
+                { range: [6, 7], color: "#87c080"},
+                { range: [7, 8], color: "#85bc8b"},
+                { range: [8, 9], color: "#80b586"}
             ],
-                  // Add a needle pointer to point to the value
-        threshold: {
-            line: { color: "red", width: 4 },
-            thickness: 0.75,
-            value: washingFrequency
+            threshold: {
+                line: { color: "#648e6c", width: 4 },
+                thickness: 0.75,
+                value: washingFrequency
+              }
         },
-        }
+        number: {
+            font: {color: "#648e6c",
+                size: 60}
+        },     
     };
     const gaugeData = [gaugeTrace];
 
     // Define the layout for the gauge chart
     const gaugeLayout = {
-        width: 400,
-        height: 400,
+        width: 500,
+        height: 500,
         margin: { t: 0, b: 0 },
         paper_bgcolor: "white",
-        font: { color: "darkblue", family: "Arial" }
+        font: { color: "648e6c", family: "verdana" }
     };
       
     // Plot the gauge chart
