@@ -185,12 +185,9 @@ function optionChanged(selectedID) {
     // Get the selected ID from the dropdown
     selectedID = d3.select("#selDataset").property("value");
   
-    // Call the createBarChart function with the selected ID
+    // Replot all charts with the selected ID
     createBarChart(selectedID);
     createBubbleChart(selectedID);
     displayMetadata(selectedID);
     createGaugeChart(selectedID);
 }
-
-// Attach the optionChanged function to the dropdown's onchange event
-// d3.select("#selDataset").on("change", optionChanged);
